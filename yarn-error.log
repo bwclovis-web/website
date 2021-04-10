@@ -1,0 +1,74 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @sanity/block-content-to-react
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\bwclo\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\windows\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\Amazon\AWSCLI\bin;C:\Program Files\PostgreSQL\12\bin;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Users\bwclo\AppData\Local\Microsoft\WindowsApps;C:\Users\bwclo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Docker Toolbox;C:\Program Files\heroku\bin;C:\Users\bwclo\AppData\Roaming\npm;C:\Users\bwclo\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.18.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\bwclo\Desktop\bwclovisWeb\package.json: Unexpected token } in JSON at position 112
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "bw-clovis-web-client",
+    "private": true,
+    "description": "A simple starter to get up and developing quickly with Gatsby",
+    "version": "0.1.0",
+    "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+    "dependencies": {
+      "gatsby": "^2.24.67",
+      "gatsby-image": "^2.4.20",
+      "gatsby-plugin-manifest": "^2.4.33",
+      "gatsby-plugin-offline": "^3.2.30",
+      "gatsby-plugin-react-helmet": "^3.3.12",
+      "gatsby-plugin-sharp": "^2.6.38",
+      "gatsby-source-filesystem": "^2.3.32",
+      "gatsby-transformer-sharp": "^2.5.16",
+      "prop-types": "^15.7.2",
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0",
+      "react-helmet": "^6.1.0"
+    },
+    "devDependencies": {
+      "prettier": "2.1.2"
+    },
+    "keywords": [
+      "gatsby"
+    ],
+    "license": "0BSD",
+    "scripts": {
+      "build": "gatsby build",
+      "develop": "gatsby develop",
+      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+      "start": "npm run develop",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean",
+      "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    },
+    "bugs": {
+      "url": "https://github.com/gatsbyjs/gatsby/issues"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
