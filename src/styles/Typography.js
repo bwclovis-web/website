@@ -8,17 +8,20 @@ const Typography = createGlobalStyle`
     font-family: Quicksand;
     src: url(${font});
     font-weight: 100 1000;
+    font-display: fallback;
   }
 
   @font-face {
     font-family: AbrilFatface;
     src: url(${headingFont});
+    font-display: fallback;
   }
 
   html {
     font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--black);
   }
+
   p, li {
     letter-spacing: 0.5px;
     font-size: clamp(1.6rem, 3vw, 1.8rem);
