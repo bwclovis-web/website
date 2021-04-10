@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import BlockContent from '@sanity/block-content-to-react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import BannerImage from '../components/Banner/Banner'
 import BlogTagList from '../components/BlogTagList/BlogTagList'
@@ -14,6 +14,28 @@ const BlogPostStyles = styled.article`
     display: block;
     border-radius: var(--radius);
     border: 1px solid var(--green);
+  }
+
+  .controls {
+    display: flex;
+    margin-top: 3.4rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .back-link {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: 0.22rem;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &:focus {
+      color: var(--violet);
+      border-bottom: 2px solid var(--violet);
+    }
   }
 `
 
@@ -43,8 +65,9 @@ const SingleBlogTemplate = ({ data }) => {
       <BannerImage data={post} classname="banner-left" />
       <BlogPostStyles className="content-container">
         <BlockContent blocks={post._rawContent} serializers={serializers} />
-        <div style={{ marginTop: '3.4rem' }}>
+        <div className="controls">
           <BlogTagList data={post.tags} />
+          <Link to="/blog/" className="back-link">Back to blogs</Link>
         </div>
       </BlogPostStyles>
     </section>
