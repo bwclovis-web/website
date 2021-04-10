@@ -35,6 +35,20 @@ export const query = graphql`
   }
 `
 
-AboutPage.propTypes = {}
+AboutPage.propTypes = {
+  data: PropTypes.shape({
+    page: PropTypes.shape({
+      name: PropTypes.string,
+      heading: PropTypes.string,
+      image: PropTypes.shape({
+        asset: PropTypes.shape({
+          fluid: PropTypes.shape({
+            src: PropTypes.string,
+          }),
+        }),
+      }),
+    }),
+  }),
+}
 
 export default AboutPage

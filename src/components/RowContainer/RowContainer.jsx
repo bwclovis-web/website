@@ -22,6 +22,10 @@ const RowContainer = ({ data }) => {
   )
 }
 
-RowContainer.propTypes = {}
+RowContainer.propTypes = {
+  data: PropTypes.shape({
+    nodes: PropTypes.array,
+  }),
+}
 
 export default RowContainer

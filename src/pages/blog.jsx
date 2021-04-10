@@ -78,7 +78,6 @@ const BlogListStyles = styled.div`
 const BlogPage = ({ data, pageContext }) => {
   const { page, blogs } = data
 
-  console.log('%c [blogs]', 'color:orange; background:purple', pageContext)
   return (
     <>
       <SEO
@@ -148,6 +147,26 @@ export const query = graphql`
   }
 `
 
-BlogPage.propTypes = {}
+BlogPage.propTypes = {
+  data: PropTypes.shape({
+    page: PropTypes.shape({
+      name: PropTypes.string,
+      heading: PropTypes.string,
+      image: PropTypes.shape({
+        asset: PropTypes.shape({
+          fluid: PropTypes.shape({
+            src: PropTypes.string,
+          }),
+        }),
+      }),
+    }),
+    blogs: PropTypes.shape({
+      nodes: PropTypes.array,
+    }),
+  }),
+  pageContext: PropTypes.shape({
+    tag: PropTypes.string,
+  }),
+}
 
 export default BlogPage

@@ -45,7 +45,6 @@ const CardStyles = styled(Link)`
 
 const Card = ({ data }) => {
   const { name, description, slug, image } = data
-  console.log('%c [From Card]', 'color:orange; background:purple', data)
   return (
     <CardStyles to={`/blog/${slug.current}`}>
       <h3>{name}</h3>
@@ -55,6 +54,19 @@ const Card = ({ data }) => {
   )
 }
 
-Card.propTypes = {}
+Card.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    slug: PropTypes.shape({
+      current: PropTypes.string,
+    }),
+    image: PropTypes.shape({
+      asset: PropTypes.shape({
+        fluid: PropTypes.object,
+      }),
+    }),
+  }),
+}
 
 export default Card

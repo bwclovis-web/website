@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Image from '../image'
 
@@ -87,27 +86,22 @@ const NavigationStyles = styled.nav`
   }
 `
 
-const Navigation = () => {
-  console.log('%c [O HAi]', 'color:orange; background:purple')
-  return (
-    <NavigationStyles>
-      <Link to="/" aria-label="home page">
-        <Image />
-      </Link>
-      <ul>
-        <li className="h2">
-          <Link to="/about">
-            <span>ABOUT</span>
-          </Link>
-        </li>
-        <li className="h2">
-          <Link to="/blog">BLOG</Link>
-        </li>
-      </ul>
-    </NavigationStyles>
-  )
-}
-
-Navigation.propTypes = {}
+const Navigation = () => (
+  <NavigationStyles>
+    <Link to="/" aria-label="home page">
+      <Image />
+    </Link>
+    <ul>
+      <li className="h2">
+        <Link to="/about">
+          <span>ABOUT</span>
+        </Link>
+      </li>
+      <li className="h2">
+        <Link to="/blog">BLOG</Link>
+      </li>
+    </ul>
+  </NavigationStyles>
+)
 
 export default Navigation

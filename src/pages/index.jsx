@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import PropTypes from 'prop-types'
 import BannerImage from '../components/Banner/Banner'
 
 import RowContainer from '../components/RowContainer/RowContainer'
@@ -51,5 +52,24 @@ export const query = graphql`
     }
   }
 `
+
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    page: PropTypes.shape({
+      name: PropTypes.string,
+      heading: PropTypes.string,
+      image: PropTypes.shape({
+        asset: PropTypes.shape({
+          fluid: PropTypes.shape({
+            src: PropTypes.string,
+          }),
+        }),
+      }),
+    }),
+    blogs: PropTypes.shape({
+      nodes: PropTypes.array,
+    }),
+  }),
+}
 
 export default IndexPage

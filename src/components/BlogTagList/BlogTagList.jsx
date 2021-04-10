@@ -43,17 +43,16 @@ const StyledTagList = styled.ul`
 
 const BlogTagList = ({ data }) => (
   <StyledTagList>
-    {data.map(item => {
-      console.log('%c [item]', 'color:orange; background:purple', item.name)
-      return (
-        <li className="blog-tag">
-          <Link to={`/blog/${item.name}`}>{item.name.toUpperCase()}</Link>
-        </li>
-      )
-    })}
+    {data.map((item, i) => (
+      <li className="blog-tag" key={i}>
+        <Link to={`/blog/${item.name}`}>{item.name.toUpperCase()}</Link>
+      </li>
+    ))}
   </StyledTagList>
 )
 
-BlogTagList.propTypes = {}
+BlogTagList.propTypes = {
+  data: PropTypes.array,
+}
 
 export default BlogTagList

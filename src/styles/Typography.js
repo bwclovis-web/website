@@ -26,6 +26,7 @@ const Typography = createGlobalStyle`
     letter-spacing: 0.5px;
     font-size: clamp(1.6rem, 3vw, 1.8rem);
     font-weight: 500;
+    color: var(--black);
   }
   h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
