@@ -10,11 +10,10 @@ const AboutPage = ({ data }) => {
     <>
       <SEO title={page.name} image={page.image.asset.fluid.src} />
       <BannerImage data={page} />
-      <div className="content-container">
+      <section className="content-container">
         <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-      </div>
+        <p>Once upon a time..... to be continued.</p>
+      </section>
     </>
   )
 }

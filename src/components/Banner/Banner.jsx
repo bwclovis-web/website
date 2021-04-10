@@ -13,7 +13,7 @@ const BannerImage = ({ classname, data }) => {
     <BackgroundImage
       Tag="div"
       fluid={renderedImage}
-      className={classname}
+      className="hero"
       style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center bottom',

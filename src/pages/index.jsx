@@ -13,6 +13,15 @@ const IndexPage = ({ data }) => {
       <SEO title={page.name} image={page.image.asset.fluid.src} />
       <BannerImage data={page} />
       <section className="content-container">
+        <h2>OHAI Friends</h2>
+        <p>
+          Look ma, I finanaly put up a web page! I am a Philly area based web
+          developer / architect who mainly resides on the front end of things.
+          There's an about me I'm SURE to update some year, but for now I
+          currently work at Comcast on the B2B ecomm site as well as keeping
+          busy with several side projects.
+        </p>
+        <p>Contact form to follow.</p>
         <h2>Recent Ramblings:</h2>
         <RowContainer data={blogs} />
       </section>
