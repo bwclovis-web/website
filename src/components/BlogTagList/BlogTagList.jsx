@@ -31,7 +31,8 @@ const StyledTagList = styled.ul`
       font-weight: 500;
       transition: all 0.2s ease-in-out;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: var(--violet);
         box-shadow: -0.6rem 0.7rem 0 -0.1rem var(--green);
         color: var(--ltblue);

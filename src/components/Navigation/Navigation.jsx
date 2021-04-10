@@ -70,7 +70,8 @@ const NavigationStyles = styled.nav`
     }
   }
 
-  .h2 > a:hover {
+  .h2 > a:hover,
+  a:focus {
     &:after {
       opacity: 1;
       transform: scaleY(1);
@@ -90,7 +91,7 @@ const Navigation = () => {
   console.log('%c [O HAi]', 'color:orange; background:purple')
   return (
     <NavigationStyles>
-      <Link to="/">
+      <Link to="/" aria-label="home page">
         <Image />
       </Link>
       <ul>

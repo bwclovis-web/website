@@ -7,17 +7,15 @@ import SEO from '../components/seo'
 import BannerImage from '../components/Banner/Banner'
 import BlogTagList from '../components/BlogTagList/BlogTagList'
 
-const BlogListStyles = styled.ul`
-  list-style: none;
-  padding: 0;
+const BlogListStyles = styled.div`
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
   .blog-list_item {
     padding-bottom: 6rem;
     border-bottom: 0.6rem dotted var(--purple);
-
-    .h2 {
-      margin-bottom: 0;
-    }
 
     @media (min-width: 900px) {
       display: grid;
@@ -32,6 +30,22 @@ const BlogListStyles = styled.ul`
 
     &:last-child {
       border-bottom: 0;
+    }
+
+    &-container {
+      a {
+        display: inline-flex;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          color: var(--purple);
+        }
+
+        h2 {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
@@ -72,15 +86,15 @@ const BlogPage = ({ data, pageContext }) => {
         image={page.image.asset.fluid.src}
       />
       <BannerImage data={page} />
-      <div className="content-container">
-        <BlogListStyles>
-          {pageContext.tag && (
-            <p className="blog-title h2">Posts on {pageContext.tag}</p>
-          )}
+      <BlogListStyles className="content-container">
+        {pageContext.tag && (
+          <p className="blog-title h2">Posts on {pageContext.tag}</p>
+        )}
+        <ul>
           {blogs.nodes.map(blog => (
             <li key={blog.id} className="blog-list_item">
               {formatDate(blog._createdAt)}
-              <div>
+              <div className="blog-list_item-container">
                 <Link to={`/blog/${blog.slug.current}`}>
                   <h2>{blog.name}</h2>
                 </Link>
@@ -89,8 +103,8 @@ const BlogPage = ({ data, pageContext }) => {
               <BlogTagList data={blog.tags} />
             </li>
           ))}
-        </BlogListStyles>
-      </div>
+        </ul>
+      </BlogListStyles>
     </>
   )
 }
