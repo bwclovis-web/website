@@ -21,20 +21,30 @@ const BlogPostStyles = styled.article`
     margin-top: 3.4rem;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: 900px) {
+      flex-direction: row;
+    }
   }
 
   .back-link {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
     font-weight: 700;
     color: var(--purple);
     text-transform: uppercase;
     letter-spacing: 0.22rem;
     border-bottom: 2px solid transparent;
+    margin-top: 2rem;
 
     &:hover,
     &:focus {
       color: var(--violet);
       border-bottom: 2px solid var(--violet);
+    }
+
+    @media (min-width: 900px) {
+      margin-top: 0;
     }
   }
 `
