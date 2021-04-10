@@ -101,6 +101,7 @@ const GlobalStyles = createGlobalStyle`
 
   .content-container {
     padding: clamp(2rem, 3vw, 6rem);
+    color: var(--black);
   }
 `
 
