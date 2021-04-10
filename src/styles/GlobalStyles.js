@@ -96,6 +96,7 @@ const GlobalStyles = createGlobalStyle`
 
     @media (min-width: 900px) {
       margin-left: 26%;
+      width: calc(100% - 26%);
     }
   }
 
