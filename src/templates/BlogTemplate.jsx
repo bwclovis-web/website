@@ -18,7 +18,7 @@ const BlogPostStyles = styled.article`
 
   .controls {
     display: flex;
-    margin-top: 3.4rem;
+    margin-top: clamp(3.4rem, 3vw, 6.4rem);
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -55,6 +55,8 @@ const serializers = {
       switch (props.node.style) {
         case 'h1':
           return <h1>{props.children}</h1>
+        case 'h2':
+          return <h2>{props.children}</h2>
 
         default:
           return <p>{props.children}</p>
