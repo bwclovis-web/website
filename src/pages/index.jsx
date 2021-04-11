@@ -42,7 +42,7 @@ export const query = graphql`
         }
       }
     }
-    blogs: allSanityBlog(limit: 3) {
+    blogs: allSanityBlog(limit: 3, sort: { fields: _createdAt, order: DESC }) {
       nodes {
         id
         name

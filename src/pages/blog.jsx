@@ -121,6 +121,7 @@ export const query = graphql`
     }
     blogs: allSanityBlog(
       filter: { tags: { elemMatch: { name: { in: $tag } } } }
+      sort: { fields: _createdAt, order: DESC }
     ) {
       nodes {
         name

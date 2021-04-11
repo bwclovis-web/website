@@ -28,6 +28,23 @@ const BlogPostStyles = styled.article`
     }
   }
 
+  ul {
+    padding: 0 0 1rem;
+    list-style: square inside;
+
+    li {
+      padding-top: 1rem;
+    }
+  }
+
+  h3 {
+    margin-top: 4.6rem;
+  }
+
+  h3 + p {
+    margin-top: 0.6rem;
+  }
+
   .back-link {
     font-size: clamp(1.6rem, 3vw, 2rem);
     font-weight: 700;
@@ -57,6 +74,8 @@ const serializers = {
           return <h1>{props.children}</h1>
         case 'h2':
           return <h2>{props.children}</h2>
+        case 'h3':
+          return <h3>{props.children}</h3>
 
         default:
           return <p>{props.children}</p>
