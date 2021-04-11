@@ -22,7 +22,6 @@ const NavigationStyles = styled.nav`
   ul {
     list-style: none;
     width: 100%;
-    padding: 0;
     display: flex;
     justify-content: space-around;
 
@@ -40,6 +39,9 @@ const NavigationStyles = styled.nav`
       margin: 5rem auto;
       width: 100%;
     }
+  }
+  .h2 {
+    margin-bottom: 0;
   }
 
   .h2 > a {

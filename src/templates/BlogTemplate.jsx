@@ -60,6 +60,7 @@ const serializers = {
           return <p>{props.children}</p>
       }
     },
+    // eslint-disable-next-line react/display-name
     bodyImage: ({ node }) => (
       <img src={node.asset.url} alt={node.alt ? node.alt : '#'} />
     ),
@@ -77,7 +78,9 @@ const SingleBlogTemplate = ({ data }) => {
         <BlockContent blocks={post._rawContent} serializers={serializers} />
         <div className="controls">
           <BlogTagList data={post.tags} />
-          <Link to="/blog/" className="back-link">Back to blogs</Link>
+          <Link to="/blog/" className="back-link">
+            Back to blogs
+          </Link>
         </div>
       </BlogPostStyles>
     </section>

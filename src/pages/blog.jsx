@@ -8,11 +8,6 @@ import BannerImage from '../components/Banner/Banner'
 import BlogTagList from '../components/BlogTagList/BlogTagList'
 
 const BlogListStyles = styled.div`
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
   .blog-list_item {
     padding-bottom: 6rem;
     border-bottom: 0.6rem dotted var(--purple);
@@ -35,11 +30,14 @@ const BlogListStyles = styled.div`
     &-container {
       a {
         display: inline-flex;
+        border-bottom: 4px solid var(--purple);
+        margin-bottom: clamp(1rem, 3vw, 1.8rem);
 
         &:hover,
         &:focus {
-          text-decoration: underline;
           color: var(--purple);
+          border-color: var(--green);
+          transition: all 0.24s ease-in-out;
         }
 
         h2 {
